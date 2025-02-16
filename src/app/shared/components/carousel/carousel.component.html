@@ -1,0 +1,39 @@
+<div id="carouselContainer" class="carousel container">
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" [attr.data-interval]="dataInterval">
+    <div *ngIf="carouselItems.length>1">
+      <ol class="carousel-indicators">
+        <li *ngFor="let item of carouselItems; let i = index" [attr.data-target]="'#carouselExampleCaptions'"
+            [attr.data-slide-to]="i" [ngClass]="{ 'active': i === 0 }"></li>
+      </ol>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item" *ngFor="let item of carouselItems; let i = index" [ngClass]="{ 'active': i === 0 }">
+        <ng-container *ngIf="item.type === 0">
+          <img [src]="item.src" [alt]="item.alt" [width]="width" [height]="height">
+        </ng-container>
+        <ng-container *ngIf="item.type === 1">
+          <iframe [width]="height" [height]="width" [src]="getSafeVideoURL(item.src)" title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+        </ng-container>
+<!--        <div class="carousel-caption d-none d-md-block carousel-text">-->
+<!--&lt;!&ndash;          <h5>{{ item.captionTitle }}</h5>&ndash;&gt;-->
+<!--&lt;!&ndash;          <p>{{ item.captionText }}</p>&ndash;&gt;-->
+<!--        </div>-->
+        <h5 class="text-center pt-3 font-italic text-dark">{{ item.captionTitle }}</h5>
+        <p class="text-center pt-3 font-italic text-dark">{{item.captionText}}</p>
+      </div>
+    </div>
+    <div *ngIf="carouselItems.length>1">
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+<h6 *ngIf="description" class="text-center pt-3 font-italic">{{description}}</h6>
