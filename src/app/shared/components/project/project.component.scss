@@ -1,0 +1,46 @@
+.center-align {
+  text-align: center;
+}
+
+.project{
+  padding-bottom: 15px;
+}
+.clickable-div {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.clickable-div:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.clickable-div img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease;
+}
+
+.clickable-div:hover img {
+  filter: brightness(70%);
+}
+
+.info-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.clickable-div:hover .info-icon {
+  opacity: 1;
+}
+
+
+

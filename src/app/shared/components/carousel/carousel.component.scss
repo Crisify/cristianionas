@@ -1,0 +1,42 @@
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .carousel {
+    flex-direction: column;
+    padding-bottom: 10px;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+h5{
+  margin-bottom: 0;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+p {
+  margin-bottom: 0;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.carousel-text {
+  color: black;
+}
+.carousel-caption h5,
+.carousel-caption p {
+  color: black;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  filter: invert(100%);
+}
+
+.carousel-indicators li{
+  filter: invert(100%);
+}
