@@ -21,7 +21,6 @@ import {NotificationServiceComponent} from './portofolio/notification-service/no
 import {InsuranceProcessesComponent} from './portofolio/insurance-processes/insurance-processes.component';
 import {BrokerCloudComponent} from './portofolio/broker-cloud/broker-cloud.component';
 import {NavigationEnd, Router} from "@angular/router";
-import {RecommendationsComponent} from './recommendations/recommendations.component';
 
 @NgModule({
   declarations: [
@@ -38,8 +37,7 @@ import {RecommendationsComponent} from './recommendations/recommendations.compon
     OneDirectorySyncComponent,
     NotificationServiceComponent,
     InsuranceProcessesComponent,
-    BrokerCloudComponent,
-    RecommendationsComponent
+    BrokerCloudComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {faFacebookF, faLinkedinIn, faInstagram} from '@fortawesome/free-brands-svg-icons';
+import {faLinkedinIn, faWhatsapp, faTelegram} from '@fortawesome/free-brands-svg-icons';
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import {MixpanelService} from "../shared/services/mixpanel/mixpanel.service";
 
@@ -9,9 +9,7 @@ import {MixpanelService} from "../shared/services/mixpanel/mixpanel.service";
   styleUrls: ['./aboutme.component.scss']
 })
 export class AboutmeComponent implements OnInit {
-  faInstagram = faInstagram;
   faLinkedin = faLinkedinIn;
-  faFacebook = faFacebookF;
   faEnvelope = faEnvelope;
 
   constructor(private mixpanelService: MixpanelService) {
@@ -20,4 +18,7 @@ export class AboutmeComponent implements OnInit {
   ngOnInit(): void {
     this.mixpanelService.track('AboutMeComponent Opened');
   }
+
+  protected readonly faWhatsapp = faWhatsapp;
+  protected readonly faTelegram = faTelegram;
 }
