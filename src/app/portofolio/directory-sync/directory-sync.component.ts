@@ -10,7 +10,7 @@ export class DirectorySyncComponent implements OnInit {
   images = [
     {
       src: 'assets/images/projects/directorySync/synchronization.png',
-      captionText: 'System architecture'
+      captionText: 'High-Level System Architecture Overview'
     }
   ];
 

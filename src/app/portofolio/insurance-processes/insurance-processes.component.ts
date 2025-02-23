@@ -10,7 +10,7 @@ export class InsuranceProcessesComponent implements OnInit{
   images = [
     {
       src: 'assets/images/projects/insurance/diagram.png',
-      captionText: 'diagram'
+      captionText: 'High-Level System Architecture Overview'
     }
   ];
 
