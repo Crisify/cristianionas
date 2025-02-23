@@ -13,19 +13,23 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
+      - name: Adding Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18' 
-
-      - name: Install dependencies
+          node-version: 18
+          
+      - name: Install Dependencies
         run: npm install
+  
+      - name: Build Angular App
+        run: npm run build
 
       - name: Build the Angular app
         run: npm run build -- --configuration=production
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.TOKEN }}
-          publish_dir: ./dist/crisionas.github.io
+      - name: Deploy to gh pages
+        run: |
+          npx angular-cli-ghpages --dir=dist/crisionas.github.io
+        env:
+          CI: true
+          GH_TOKEN: ${{ secrets.TOKEN }}
