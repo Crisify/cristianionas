@@ -26,7 +26,7 @@
     "@mdi/angular-material": "^7.2.96",
     "@ng-bootstrap/ng-bootstrap": "^13.0.0",
     "@types/mixpanel-browser": "^2.38.1",
-    "bootstrap": "^4.6.2",
+    "bootstrap": "^5.3.3",
     "jquery": "^3.7.0",
     "mixpanel-browser": "^2.47.0",
     "ngx-typed-js": "^2.1.1",
@@ -35,8 +35,8 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^14.0.2",
-    "@angular/cli": "~14.0.2",
+    "@angular-devkit/build-angular": "^15.2.11",
+    "@angular/cli": "~15.2.11",
     "@angular/compiler-cli": "^15.2.10",
     "@types/jasmine": "~4.0.0",
     "jasmine-core": "~4.1.0",
