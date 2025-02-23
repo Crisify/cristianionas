@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {CarouselItem, CarouselItemType} from "../../shared/components/carousel/carousel.component";
 import {MixpanelService} from "../../shared/services/mixpanel/mixpanel.service";
 
 @Component({
@@ -8,22 +7,23 @@ import {MixpanelService} from "../../shared/services/mixpanel/mixpanel.service";
   styleUrls: ['./migration-tool.component.scss']
 })
 export class MigrationToolComponent implements OnInit {
-  carouselImages: CarouselItem[] = [
+  images = [
     {
       src: 'assets/images/projects/migrationTool/initial.png',
-      type: CarouselItemType.image
+      captionText: 'Select the Source Database to Begin the Migration'
     },
     {
       src: 'assets/images/projects/migrationTool/choose-db.png',
-      type: CarouselItemType.image
-    }, {
+      captionText: 'Configure the Destination Database for Data Transfer'
+    },
+    {
       src: 'assets/images/projects/migrationTool/migration-in-progress.png',
-      type: CarouselItemType.image
+      captionText: 'Monitor the Migration Process in Real-Time'
     },
     {
       src: 'assets/images/projects/migrationTool/db-configuration.png',
-      type: CarouselItemType.image
-    },
+      captionText: 'Complete the Final Configuration for Successful Migration'
+    }
   ];
 
   constructor(private mixpanelService: MixpanelService) {

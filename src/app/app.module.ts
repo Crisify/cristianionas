@@ -11,7 +11,6 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {PortfolioPageComponent} from './portofolio/portfolio-page/portfolio-page.component';
 import {FormsModule} from "@angular/forms";
 import {ProjectComponent} from './shared/components/project/project.component';
-import {CarouselComponent} from './shared/components/carousel/carousel.component';
 import {VotingSystemComponent} from './portofolio/voting-system/voting-system.component';
 import {MigrationToolComponent} from './portofolio/migration-tool/migration-tool.component';
 import {NgbCarouselModule} from "@ng-bootstrap/ng-bootstrap";
@@ -21,6 +20,10 @@ import {NotificationServiceComponent} from './portofolio/notification-service/no
 import {InsuranceProcessesComponent} from './portofolio/insurance-processes/insurance-processes.component';
 import {BrokerCloudComponent} from './portofolio/broker-cloud/broker-cloud.component';
 import {NavigationEnd, Router} from "@angular/router";
+import {ImageViewerComponent} from "./shared/components/image-viewer-component/image-viewer-component.component";
+import {NgOptimizedImage} from "@angular/common";
+import {VideoViewerComponent} from "./shared/components/video-viewer-component/video-viewer-component.component";
+import {SafeUrlPipe} from "./shared/pipes/safe-url/safe-url-pipe.pipe";
 
 @NgModule({
   declarations: [
@@ -30,7 +33,6 @@ import {NavigationEnd, Router} from "@angular/router";
     FooterComponent,
     PortfolioPageComponent,
     ProjectComponent,
-    CarouselComponent,
     VotingSystemComponent,
     MigrationToolComponent,
     DirectorySyncComponent,
@@ -47,9 +49,14 @@ import {NavigationEnd, Router} from "@angular/router";
     FontAwesomeModule,
     FormsModule,
     NgbCarouselModule,
-    BrowserModule
+    BrowserModule,
+    NgOptimizedImage,
+    ImageViewerComponent,
+    VideoViewerComponent,
+    SafeUrlPipe
   ],
   providers: [],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {

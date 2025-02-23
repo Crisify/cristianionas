@@ -2,7 +2,9 @@
   <div class="ci-content-section">
     <h1 class="heading-primary">Notification Service</h1>
     <div class="project-details main-container">
-      <app-carousel [carouselItems]="carouselImages" description="Service Architecture Diagram"></app-carousel>
+      <div *ngFor="let image of images">
+        <app-image-viewer-component [src]="image.src" [captionText]="image.captionText"/>
+      </div>
 
       <section id="projectCharacteristics" class="about tools-used">
         <h2 class="ci-heading">Characteristics</h2>

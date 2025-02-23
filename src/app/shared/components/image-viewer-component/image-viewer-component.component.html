@@ -1,0 +1,14 @@
+<!-- path/to/image-viewer-component.component.html -->
+<div class='img-container'>
+  <img [src]="src" class='expand-icon' (click)="openViewer()" alt="Image">
+
+  <div *ngIf="isViewerOpen" id="img-viewer" (click)="closeViewer()">
+    <span class="close">&times;</span>
+    <div class="modal-content-container">
+      <img class="modal-content" [src]="src" alt="Image">
+      <div *ngIf="captionText" class="modal-caption">{{ captionText }}</div>
+    </div>
+  </div>
+
+  <div *ngIf="captionText" class="caption">{{ captionText }}</div>
+</div>

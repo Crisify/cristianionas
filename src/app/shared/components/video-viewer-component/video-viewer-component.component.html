@@ -1,0 +1,10 @@
+<!-- video-viewer-component.component.html -->
+<div class='video-container'>
+  <iframe [src]="src | safeUrl"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+
+  <div *ngIf="captionText" class="caption">{{ captionText }}</div>
+</div>

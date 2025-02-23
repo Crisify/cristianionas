@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {CarouselItem, CarouselItemType} from "../../shared/components/carousel/carousel.component";
 import {MixpanelService} from "../../shared/services/mixpanel/mixpanel.service";
 
 @Component({
@@ -8,11 +7,10 @@ import {MixpanelService} from "../../shared/services/mixpanel/mixpanel.service";
   styleUrls: ['./directory-sync.component.scss']
 })
 export class DirectorySyncComponent implements OnInit {
-  carouselImages: CarouselItem[] = [
+  images = [
     {
       src: 'assets/images/projects/directorySync/synchronization.png',
-      captionText: 'System architecture',
-      type: CarouselItemType.image
+      captionText: 'System architecture'
     }
   ];
 

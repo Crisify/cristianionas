@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {CarouselItem, CarouselItemType} from "../../shared/components/carousel/carousel.component";
 import {MixpanelService} from "../../shared/services/mixpanel/mixpanel.service";
 
 @Component({
@@ -8,28 +7,25 @@ import {MixpanelService} from "../../shared/services/mixpanel/mixpanel.service";
   styleUrls: ['./one-directory-sync.component.scss']
 })
 export class OneDirectorySyncComponent implements OnInit {
-  carouselImages: CarouselItem[] = [
+  images = [
     {
       src: 'assets/images/projects/ods/diagram.png',
-      captionText: 'System architecture',
-      type: CarouselItemType.image
+      captionText: 'High-Level System Architecture Diagram'
     },
     {
       src: 'assets/images/projects/ods/main.png',
-      captionText: 'Main Page',
-      type: CarouselItemType.image
+      captionText: 'Main Dashboard Interface'
     },
     {
       src: 'assets/images/projects/ods/addEdit.png',
-      captionText: 'Add/Edit Page',
-      type: CarouselItemType.image
+      captionText: 'Add and Edit Entry Page'
     },
     {
       src: 'assets/images/projects/ods/addEditOption.png',
-      captionText: 'Options Page',
-      type: CarouselItemType.image
+      captionText: 'Configuration Options Management Page'
     }
   ];
+
 
   constructor(private mixpanelService: MixpanelService) {
   }

@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {CarouselItem, CarouselItemType} from "../../shared/components/carousel/carousel.component";
 import {MixpanelService} from "../../shared/services/mixpanel/mixpanel.service";
 
 @Component({
@@ -8,10 +7,10 @@ import {MixpanelService} from "../../shared/services/mixpanel/mixpanel.service";
   styleUrls: ['./insurance-processes.component.scss']
 })
 export class InsuranceProcessesComponent implements OnInit{
-  carouselImages: CarouselItem[] = [
+  images = [
     {
       src: 'assets/images/projects/insurance/diagram.png',
-      type: CarouselItemType.image
+      captionText: 'diagram'
     }
   ];
 

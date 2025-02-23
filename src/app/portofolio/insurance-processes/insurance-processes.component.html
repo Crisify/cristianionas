@@ -2,8 +2,10 @@
   <div class="ci-content-section">
     <h1 class="heading-primary">Automated Insurance Processes</h1>
     <div class="project-details main-container">
-      <app-carousel [carouselItems]="carouselImages"
-                    description="Sample Of System Architecture Used Diagram"></app-carousel>
+
+      <div *ngFor="let image of images">
+        <app-image-viewer-component [src]="image.src" [captionText]="image.captionText"/>
+      </div>
 
       <section id="projectCharacteristics" class="about tools-used">
         <h2 class="ci-heading">Characteristics</h2>
