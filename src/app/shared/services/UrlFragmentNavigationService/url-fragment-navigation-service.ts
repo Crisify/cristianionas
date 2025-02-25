@@ -27,6 +27,8 @@ export class UrlFragmentNavigationService {
           await this.router.navigate(['/projects/one-directory-sync']);
         } else if (url.includes('#notification-service')) {
           await this.router.navigate(['/projects/notification-service']);
+        }else if (url.includes('#signing-process')) {
+          await this.router.navigate(['/projects/signing-process']);
         }
       }
     });
