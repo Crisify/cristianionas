@@ -8,6 +8,7 @@ import {Component} from '@angular/core';
 export class PortfolioPageComponent {
 
   projects = [
+    {title: 'Digital Document Signing Process', image: 'assets/images/projects/signatureProcess/overview.png', projectNameRoute: "signing-process"},
     {title: 'Insurance Processes', image: 'assets/images/projects/insurance/overview.png', projectNameRoute: "insurance-processes"},
     {title: 'One Directory Sync', image: 'assets/images/projects/ods/overview.png', projectNameRoute: "one-directory-sync"},
     {title: 'Notification Service', image: 'assets/images/projects/notificationService/overview.png', projectNameRoute: "notification-service"},

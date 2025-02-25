@@ -8,6 +8,7 @@ import {OneDirectorySyncComponent} from "./portofolio/one-directory-sync/one-dir
 import {NotificationServiceComponent} from "./portofolio/notification-service/notification-service.component";
 import {InsuranceProcessesComponent} from "./portofolio/insurance-processes/insurance-processes.component";
 import {BrokerCloudComponent} from "./portofolio/broker-cloud/broker-cloud.component";
+import {SigningProcessComponent} from "./portofolio/signing-process/signing-process.component";
 
 const routes: Routes = [
   {path: '', component: AboutmeComponent, pathMatch: 'full'},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'projects/notification-service', component: NotificationServiceComponent},
   {path: 'projects/insurance-processes', component: InsuranceProcessesComponent},
   {path: 'projects/broker-cloud', component: BrokerCloudComponent},
+  {path: 'projects/signing-process', component: SigningProcessComponent},
   {path: '**', redirectTo: ''}
 ];
 
