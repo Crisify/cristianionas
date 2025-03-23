@@ -1,6 +1,6 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {faLinkedinIn, faWhatsapp, faTelegram,} from '@fortawesome/free-brands-svg-icons';
-import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import {faEnvelope, faPhone} from '@fortawesome/free-solid-svg-icons';
 import {NavigationEnd, Router} from "@angular/router";
 
 @Component({
@@ -43,4 +43,5 @@ export class NavbarComponent implements OnInit {
 
   protected readonly faWhatsapp = faWhatsapp;
   protected readonly faTelegram = faTelegram;
+  protected readonly faPhone = faPhone;
 }
